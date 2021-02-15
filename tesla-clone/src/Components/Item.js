@@ -3,7 +3,7 @@ import Button from './Button'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './Items.css'
 
-function Item({ title, desc, backgroundImg, leftBtnTxt, leftBtnLink, rightBtnTxt, rightBtnlINK, twoButtons, first}) {
+function Item({ title, desc, backgroundImg, leftBtnTxt, leftBtnLink, rightBtnTxt, rightBtnLink, twoButtons, first}) {
     return (
         <div className="item" style={{
             backgroundImage: `url(${backgroundImg})`
@@ -18,15 +18,16 @@ function Item({ title, desc, backgroundImg, leftBtnTxt, leftBtnLink, rightBtnTxt
 
                 <div className="item__lowerThird">
                     <div className="item_buttons">
-                        <Button imp="primery" text={leftBtnLink} link={leftBtnLink}/>
+                        <Button imp="primery" text={leftBtnTxt} link={leftBtnLink}/>
+
                         {twoButtons && (
-                            <Button imp="secondary" text={rightBtnTxt} link={rightBtnlINK} />
+                            <Button imp="secondary" text={rightBtnTxt} link={rightBtnLink} />
                         )}
                     </div>
 
                     {first && (
                         <div className="item__expand">
-                            <ExpandMoreIcon />
+                            <ExpandMoreIcon className="item__expandArrow"/>
                         </div>
                     )}
                 </div>

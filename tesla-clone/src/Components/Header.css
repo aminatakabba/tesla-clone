@@ -38,3 +38,7 @@
 .header__logoImg {
     width: 100px;
 }
+.header__nav {
+    padding-top: 10px !important;
+    padding-right: 10px !important;
+}

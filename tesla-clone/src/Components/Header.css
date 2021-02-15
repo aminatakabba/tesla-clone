@@ -28,6 +28,7 @@
 .header__right {
     display: flex;
     justify-content: flex-end;
+    padding-right: 30px;
 }
 .header__right > p {
     margin: 10px;
